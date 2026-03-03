@@ -86,3 +86,45 @@ https://ollama.com
 ##DEMO:
 <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/b696ab84-d3cf-4ec1-afb1-c50c33db6d8b" />
 
+
+---
+
+## ⚠ Limitations
+
+- Small local models may produce incorrect factual outputs.
+- Quality depends on selected model.
+- Not intended for production-level deployment.
+- Performance depends on system RAM and CPU.
+
+---
+
+## 🌱 Project Context
+
+This is my first hands-on AI systems project.
+
+The goal was not just to use an LLM, but to deeply understand:
+
+- Local model deployment
+- Streaming token responses
+- Prompt structuring
+- Timeout debugging
+- Virtual environment management
+- Real-time UI updates
+
+This project helped me move from *using AI tools* to *building AI-powered systems*.
+
+---
+
+## 🚀 Future Improvements
+
+- Add conversation memory
+- Improve factual reliability
+- Add emotion intensity slider
+- Improve UI polish
+- Explore hybrid local + cloud inference
+
+---
+
+## 👨‍💻 Author
+
+Built as a beginner AI systems project to understand LLM integration and local inference architecture.
