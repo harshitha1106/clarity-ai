@@ -1,6 +1,6 @@
-# 🧠 Clarity AI (Local LLM Decision Assistant)
+# 🧠 Clarity AI — Local LLM Decision Assistant
 
-Clarity AI is a lightweight AI-powered decision assistant built using a locally running LLM via Ollama.  
+Clarity AI is a lightweight AI-powered decision assistant built using a locally running Large Language Model (LLM) via Ollama.
 
 It transforms messy thoughts into structured clarity with actionable guidance.
 
@@ -9,10 +9,59 @@ It transforms messy thoughts into structured clarity with actionable guidance.
 ## 🚀 Features
 
 - ✅ Fully local AI (no API cost)
-- ✅ Real-time streaming response
+- ✅ Real-time streaming responses
 - ✅ Structured clarity framework
-- ✅ Simple and clean Streamlit interface
+- ✅ Clean Streamlit interface
 - ✅ No external cloud dependency
+
+---
+
+## 🏗 System Architecture
+
+User Input  
+↓  
+Streamlit UI  
+↓  
+HTTP Request  
+↓  
+Ollama Local Server (127.0.0.1:11434)  
+↓  
+Local LLM (phi3:mini / tinyllama)  
+↓  
+Streaming Token Response  
+↓  
+Rendered Structured Output  
+
+---
+
+## 🧠 How It Works
+
+1. The user enters a confused thought.
+2. The app builds a structured clarity prompt.
+3. A request is sent to a locally running LLM via Ollama.
+4. The model streams tokens in real time.
+5. The UI updates progressively as the response is generated.
+
+### Why Streaming?
+
+Initially, non-streaming inference caused timeout issues on low-memory systems because the request waited for full completion.
+
+Switching to streaming enabled token-wise incremental responses, preventing blocking and improving responsiveness.
+
+---
+
+## 📌 Output Format
+
+The assistant responds in this structured format:
+
+- Core Problem  
+- Hidden Fear  
+- Logical Breakdown  
+- Immediate Next Action  
+- What NOT to Do  
+- Conclusion  
+
+The goal is to provide simple, direct, actionable clarity.
 
 ---
 
@@ -26,46 +75,14 @@ It transforms messy thoughts into structured clarity with actionable guidance.
 
 ---
 
-## 🧠 How It Works
-
-1. User enters a confused thought.
-2. The app constructs a structured clarity prompt.
-3. Streamlit sends request to local Ollama server.
-4. The model streams response in real-time.
-5. Output is displayed in structured format:
-
-- Core Problem  
-- Hidden Fear  
-- Logical Breakdown  
-- Immediate Next Action  
-- What NOT to Do  
-- Conclusion  
-
----
-
-##DEMO:
-<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/b696ab84-d3cf-4ec1-afb1-c50c33db6d8b" />
-
-## 🏗 System Architecture
-
-User Input  
-↓  
-Streamlit UI  
-↓  
-HTTP Request  
-↓  
-Ollama Local Server  
-↓  
-LLM (phi3:mini / tinyllama)  
-↓  
-Streaming Response  
-↓  
-Rendered Structured Output
-
-## ⚙️ Setup Instructions
+## 🖥 Running This Project Locally
 
 ### 1️⃣ Install Ollama
 Download from:
 https://ollama.com
 
-### 2️⃣ Pull Model
+### 2️⃣ Pull Required Model
+
+##DEMO:
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/b696ab84-d3cf-4ec1-afb1-c50c33db6d8b" />
+
