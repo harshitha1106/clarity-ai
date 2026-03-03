@@ -43,6 +43,10 @@ It transforms messy thoughts into structured clarity with actionable guidance.
 
 ---
 
+##DEMO:
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/b696ab84-d3cf-4ec1-afb1-c50c33db6d8b" />
+
+
 ## ⚙️ Setup Instructions
 
 ### 1️⃣ Install Ollama
